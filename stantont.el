@@ -24,7 +24,7 @@
 (setq backup-directory-alist (list (cons "." backup-dir)))
 
 ;; Font
-(set-face-font 'default "-apple-dejavu sans mono-medium-r-normal--12-120-72-72-m-120-iso10646-1")
+;(set-face-font 'default "-apple-dejavu sans mono-medium-r-normal--12-120-72-72-m-120-iso10646-1")
 
 ;; Color Themes
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
@@ -39,6 +39,8 @@
                                          'fullboth)))
 (global-set-key (kbd "M-n") 'toggle-fullscreen)
 
+;;Change font size with mouse wheel
+;;(require 'zoom-frm)
 
 ;; Keyboard
  
@@ -58,3 +60,12 @@
  
 (server-start)
 
+;; from
+;; http://blog.alieniloquent.com/2009/07/01/using-emacsclient-on-mac-os/
+;; to enable "eopen <filename>" from command line
+(let ((dir (getenv "EOPEN_DIR"))
+      (file (getenv "EOPEN_FILE")))
+  (if dir
+      (cd dir))
+  (if file
+      (find-file file)))
