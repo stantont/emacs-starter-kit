@@ -38,12 +38,12 @@
 (color-theme-zenburn)
 
 ;; Full screen toggle
-(defun mac-toggle-fullscreen ()
-  (interactive)
-  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
-                                           nil
-                                         'fullboth)))
-(global-set-key (kbd "M-n") 'mac-toggle-fullscreen)
+;(defun mac-toggle-fullscreen ()
+;  (interactive)
+;  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
+;                                           nil
+;                                         'fullboth)))
+(global-set-key (kbd "M-n") 'ns-toggle-fullscreen)
 
 ;;Change font size with mouse wheel
 ;;(require 'zoom-frm)
