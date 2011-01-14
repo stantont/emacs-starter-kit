@@ -21,7 +21,7 @@
       inhibit-startup-message t
       transient-mark-mode t
       color-theme-is-global t
-      shift-select-mode nil
+      ;shift-select-mode nil
       mouse-yank-at-point t
       require-final-newline t
       truncate-partial-width-windows nil
@@ -36,7 +36,7 @@
 
 ;; Set this to whatever browser you use
 ;; (setq browse-url-browser-function 'browse-url-firefox)
-;; (setq browse-url-browser-function 'browse-default-macosx-browser)
+(setq browse-url-browser-function 'browse-default-macosx-browser)
 ;; (setq browse-url-browser-function 'browse-default-windows-browser)
 ;; (setq browse-url-browser-function 'browse-default-kde)
 ;; (setq browse-url-browser-function 'browse-default-epiphany)
